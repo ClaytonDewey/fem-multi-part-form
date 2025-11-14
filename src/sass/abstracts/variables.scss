@@ -1,0 +1,39 @@
+@use '../util' as *;
+
+:root {
+  // Colors: neutral
+  --clr-white: #ffffff;
+  --clr-black: #000000;
+  --clr-gray-500: #9699aa;
+
+  // Colors: primary
+  --clr-orange-300: #ffaf7e;
+
+  --clr-red-500: #ee374a;
+  --clr-red-450: #e96170;
+  --clr-red-400: #f9818e;
+
+  --clr-purple-600: #483eff;
+  --clr-purple-500: #6259ff;
+  --clr-purple-400: #928cff;
+  --clr-purple-200: #d6d9e6;
+
+  --clr-blue-950: #022959;
+  --clr-blue-700: #164a8a;
+  --clr-blue-300: #abbcff;
+  --clr-blue-200: #bee2fd;
+  --clr-blue-100: #eff5ff;
+  --clr-blue-50: #f8f9ff;
+
+  // Typography
+  --ff-primary: 'Ubuntu', sans-serif;
+
+  --text-preset-1: normal normal 700 rem(32) / 120% var(--ff-primary);
+  --text-preset-2: normal normal 700 rem(24) / 120% var(--ff-primary);
+  --text-preset-3: normal normal 700 rem(16) / 120% var(--ff-primary);
+  --text-preset-3-regular: normal normal 400 rem(16) / 150% var(--ff-primary);
+  --text-preset-4: normal normal 700 rem(14) / 120% var(--ff-primary);
+  --text-preset-4-medium: normal normal 500 rem(14) / 150% var(--ff-primary);
+  --text-preset-4-regular: normal normal 400 rem(14) / 120% var(--ff-primary);
+  --text-preset-5: normal normal 400 rem(12) / 120% var(--ff-primary);
+}
