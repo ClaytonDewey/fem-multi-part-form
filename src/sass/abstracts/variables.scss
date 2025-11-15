@@ -36,4 +36,11 @@
   --text-preset-4-medium: normal normal 500 #{rem(14)} / 150% var(--ff-primary);
   --text-preset-4-regular: normal normal 400 #{rem(14)} / 120% var(--ff-primary);
   --text-preset-5: normal normal 400 #{rem(12)} / 120% var(--ff-primary);
+
+  // Transitions
+  --transition: all 0.3s ease-in-out;
+
+  @media (prefers-reduced-motion: reduce) {
+    --transition: none;
+  }
 }

@@ -1,0 +1,40 @@
+@use '../util' as *;
+
+.btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: rem(1) solid transparent;
+  border-radius: rem(4);
+
+  &-primary {
+    background-color: var(--clr-blue-950);
+    border-color: var(--clr-blue-950);
+    color: var(--clr-white);
+    font: var(--text-preset-4-medium);
+    height: rem(40);
+    padding-inline: rem(16);
+    transition: var(--transition);
+
+    &:hover {
+      background-color: var(--clr-blue-700);
+      border-color: var(--clr-blue-700);
+    }
+
+    &:active {
+      background-color: var(--clr-purple-400);
+      border-color: var(--clr-purple-400);
+    }
+  }
+
+  @include breakpoint(tablet) {
+    &-primary {
+      height: rem(48);
+      padding-inline: rem(24.5);
+      border-radius: rem(8);
+      font: var(--text-preset-3-medium);
+    }
+  }
+}
