@@ -18,11 +18,17 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: var(--clr-blue-100);
+  color: var(--clr-blue-950);
   font-family: var(--ff-primary);
 }
 
 body {
   position: relative;
+
+  @include breakpoint(tablet) {
+    background-image: none;
+  }
 }
 
 .sr-only {

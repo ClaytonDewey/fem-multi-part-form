@@ -1,0 +1,52 @@
+@use '../util' as *;
+
+.form {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: rem(24);
+  top: rem(97);
+  margin-inline: rem(16);
+  padding: rem(31.5) rem(24);
+  background-color: var(--clr-white);
+  border-radius: rem(10);
+
+  h2 {
+    font: var(--text-preset-2);
+    margin-block-end: rem(8);
+  }
+
+  p {
+    font: var(--text-preset-3-regular);
+    color: var(--clr-gray-500);
+  }
+
+  &-group {
+    display: flex;
+    flex-direction: column;
+    gap: rem(8);
+    margin-block-end: rem(16);
+
+    label {
+      font: var(--text-preset-5);
+    }
+  }
+
+  &-control {
+    display: flex;
+    align-items: center;
+    height: rem(40);
+    padding-inline: rem(16);
+    border: rem(1) solid var(--clr-purple-200);
+    font: var(--text-preset-4-medium);
+    border-radius: rem(4);
+
+    &::placeholder {
+      color: var(--clr-gray-500);
+    }
+  }
+
+  @include breakpoint(tablet) {
+    position: initial;
+  }
+}

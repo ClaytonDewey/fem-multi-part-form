@@ -1,0 +1,16 @@
+@use '../util' as *;
+
+.app {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: rem(105) auto;
+
+  @include breakpoint(tablet) {
+    flex-direction: row;
+    background-color: var(--clr-white);
+    border-radius: rem(15);
+    max-width: rem(686);
+    height: rem(600);
+  }
+}

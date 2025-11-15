@@ -1,0 +1,19 @@
+@use '../util' as *;
+
+.step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: rem(33);
+  width: rem(33);
+  border: rem(1) solid var(--clr-white);
+  color: var(--clr-white);
+  border-radius: 50%;
+  font: var(--text-preset-4);
+
+  &.active {
+    background: var(--clr-blue-200);
+    border-color: var(--clr-blue-200);
+    color: var(--clr-blue-950);
+  }
+}

@@ -1,0 +1,28 @@
+@use '../util' as *;
+
+.sidebar {
+  display: flex;
+  justify-content: center;
+  background-image: url('../../images/bg-sidebar-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  height: rem(172);
+  gap: rem(16);
+  width: 100%;
+  padding-block-start: rem(32);
+  position: relative;
+
+  @include breakpoint(tablet) {
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-image: url('../../images/bg-sidebar-desktop.svg');
+    overflow: hidden;
+    margin: rem(16);
+    padding: rem(40) rem(24);
+    height: rem(568);
+    width: rem(206);
+    flex-direction: column;
+    border-radius: rem(15);
+  }
+}
