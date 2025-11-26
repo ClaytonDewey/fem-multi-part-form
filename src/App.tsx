@@ -1,11 +1,14 @@
-import { Footer } from './components';
+import { Footer, Form, Sidebar } from './components';
 
 const App = () => {
   return (
-    <div>
-      <h1>Multi Step Form</h1>
+    <>
+      <main className='app'>
+        <Sidebar />
+        <Form />
+      </main>
       <Footer />
-    </div>
+    </>
   );
 };
 export default App;
