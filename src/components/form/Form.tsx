@@ -1,10 +1,11 @@
-import { FormButtons, Personal } from '.';
+import { FormButtons, Personal, Plan } from '.';
 
 const Form = () => {
   return (
     <section className='form'>
       <form>
-        <Personal />
+        {/* <Personal /> */}
+        <Plan />
         <FormButtons />
       </form>
     </section>
