@@ -33,6 +33,11 @@
   &-back {
     color: var(--clr-gray-500);
     font: var(--text-preset-3-medium);
+    transition: var(--transition);
+
+    &:hover {
+      color: var(--clr-blue-950);
+    }
   }
 
   @include breakpoint(tablet) {

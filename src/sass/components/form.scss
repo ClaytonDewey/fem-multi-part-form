@@ -12,6 +12,10 @@
   border-radius: rem(10);
   box-shadow: 0 rem(4) rem(4) 0 rgba(0, 0, 0, 0.25);
 
+  legend {
+    margin-block-end: rem(24);
+  }
+
   h2 {
     font: var(--text-preset-2);
     margin-block-end: rem(8);
@@ -62,11 +66,18 @@
   @include breakpoint(tablet) {
     position: relative;
     box-shadow: none;
-    margin: 0;
     border-radius: 0 rem(15) rem(15) 0;
+    padding: 0;
+    margin: auto;
+    gap: rem(84);
 
     &__buttons {
-      position: absolute;
+      position: initial;
+      padding: 0;
     }
+  }
+
+  @include breakpoint(desktop) {
+    gap: rem(80);
   }
 }
