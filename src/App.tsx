@@ -1,4 +1,5 @@
-import { Footer, Form, Sidebar } from './components';
+import { Footer, Sidebar } from './components';
+import { Form } from './components/form';
 
 const App = () => {
   return (

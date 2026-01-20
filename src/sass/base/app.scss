@@ -4,7 +4,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  margin: rem(105) auto;
+  margin: 0 auto;
 
   @include breakpoint(tablet) {
     flex-direction: row;
@@ -14,7 +14,13 @@
     height: rem(600);
   }
 
-  @include breakpoint(desktop) {
+  @include breakpoint(tablet) {
+    margin-block-start: rem(105);
+    margin-inline: rem(41);
     max-width: rem(940);
+  }
+
+  @include breakpoint(desktop) {
+    margin-inline: auto;
   }
 }

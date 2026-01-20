@@ -1,0 +1,11 @@
+@use '../util' as *;
+
+.footer {
+  display: none;
+
+  @include breakpoint(tablet) {
+    display: block;
+    text-align: center;
+    margin-block-start: rem(20);
+  }
+}

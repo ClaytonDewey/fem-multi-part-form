@@ -8,6 +8,7 @@
   background-color: transparent;
   border: rem(1) solid transparent;
   border-radius: rem(4);
+  font-family: inherit;
 
   &-primary {
     background-color: var(--clr-blue-950);
@@ -27,6 +28,11 @@
       background-color: var(--clr-purple-400);
       border-color: var(--clr-purple-400);
     }
+  }
+
+  &-back {
+    color: var(--clr-gray-500);
+    font: var(--text-preset-3-medium);
   }
 
   @include breakpoint(tablet) {

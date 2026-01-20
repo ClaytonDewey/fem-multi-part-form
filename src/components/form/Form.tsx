@@ -1,4 +1,5 @@
-import { Button, Input } from '.';
+import { Input } from '..';
+import { FormButtons } from '.';
 
 const Form = () => {
   return (
@@ -38,11 +39,8 @@ const Form = () => {
             placeholder='e.g. +1 234 567 8900'
           />
         </div>
-
-        <Button type='submit' className='btn btn-primary'>
-          Next Step
-        </Button>
       </form>
+      <FormButtons />
     </section>
   );
 };

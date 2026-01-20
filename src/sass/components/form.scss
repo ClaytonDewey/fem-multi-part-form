@@ -1,11 +1,11 @@
 @use '../util' as *;
 
 .form {
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: rem(24);
-  top: rem(97);
+  margin-block-start: rem(-75);
   margin-inline: rem(16);
   padding: rem(31.5) rem(24);
   background-color: var(--clr-white);
@@ -47,8 +47,25 @@
     }
   }
 
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--clr-white);
+    padding: rem(16);
+  }
+
   @include breakpoint(tablet) {
     position: initial;
     box-shadow: none;
+    margin-block-start: 0;
+
+    &__buttons {
+      position: initial;
+    }
   }
 }
