@@ -15,20 +15,27 @@
   position: relative;
 
   @include breakpoint(tablet) {
+    &-container {
+      background-color: var(--clr-white);
+      border-radius: rem(15) 0 0 rem(15);
+      padding: rem(15);
+      width: 100%;
+      flex: 0 0 35%;
+    }
+
     justify-content: flex-start;
     align-items: flex-start;
     background-image: url('../../images/bg-sidebar-desktop.svg');
     overflow: hidden;
-    margin: rem(16);
     padding: rem(40) rem(24);
-    height: rem(568);
-    width: 100%;
-    max-width: rem(206);
+    height: 100%;
     flex-direction: column;
     border-radius: rem(15);
   }
 
   @include breakpoint(desktop) {
-    max-width: rem(274);
+    &-container {
+      flex: 0 0 32.5%;
+    }
   }
 }

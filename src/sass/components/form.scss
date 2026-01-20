@@ -60,12 +60,13 @@
   }
 
   @include breakpoint(tablet) {
-    position: initial;
+    position: relative;
     box-shadow: none;
-    margin-block-start: 0;
+    margin: 0;
+    border-radius: 0 rem(15) rem(15) 0;
 
     &__buttons {
-      position: initial;
+      position: absolute;
     }
   }
 }
