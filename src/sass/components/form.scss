@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   gap: rem(24);
+  max-width: calc(100% - rem(32));
   margin-block-start: rem(-75);
   margin-inline: rem(16);
   padding: rem(31.5) rem(24);
@@ -73,7 +74,6 @@
   }
 
   @include breakpoint(tablet) {
-    position: relative;
     box-shadow: none;
     border-radius: 0 rem(15) rem(15) 0;
     padding: 0;
@@ -92,9 +92,84 @@
   }
 
   @include breakpoint(desktop) {
+    width: 100%;
+    max-width: rem(450);
     form {
       gap: rem(80);
     }
+  }
+}
+
+.input {
+  &-group {
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: rem(8);
+    }
+
+    height: rem(80);
+    padding: rem(16);
+    border-radius: rem(16);
+    border: rem(1) solid var(--clr-purple-200);
+
+    label {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: rem(16);
+
+      input {
+        height: 0;
+        width: 0;
+        border: none;
+      }
+    }
+
+    &:has(input:checked) {
+      border-color: var(--clr-purple-600);
+      background-color: var(--clr-blue-50);
+    }
+  }
+
+  @include breakpoint(desktop) {
+    &-group-wrapper {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: rem(18);
+    }
+
+    &-group {
+      height: rem(160);
+      width: 100%;
+
+      label {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 100%;
+
+        input {
+          order: 1;
+        }
+      }
+    }
+  }
+}
+
+.plan-info {
+  font: var(--text-preset-4-regular);
+  color: var(--clr-gray-500);
+
+  .plan-name {
+    display: block;
+    text-transform: capitalize;
+    font: var(--text-preset-3);
+    color: var(--clr-blue-950);
+  }
+
+  @include breakpoint(desktop) {
+    order: 2;
   }
 }
 
@@ -111,6 +186,7 @@
     height: rem(48);
     background-color: var(--clr-blue-50);
     border-radius: rem(8);
+    margin-block-start: rem(24);
 
     .label {
       position: relative;
@@ -119,25 +195,35 @@
       cursor: pointer;
       display: inline-block;
       margin: 0 rem(15) 0;
-      width: rem(80);
-      height: rem(40);
+      width: rem(38);
+      height: rem(20);
     }
 
     span {
       text-transform: capitalize;
+      color: var(--clr-gray-500);
+      transition: var(--transition);
+
+      &.sub-active {
+        color: var(--clr-blue-950);
+      }
     }
 
     .ball {
       background-color: var(--clr-white);
-      height: rem(34);
-      width: rem(34);
+      height: rem(12);
+      width: rem(12);
       border-radius: 50%;
       position: absolute;
-      top: rem(3);
-      left: rem(3);
+      top: rem(4);
+      left: rem(4);
       align-items: center;
       animation: slideOff 0.3s linear forwards;
     }
+  }
+
+  &.off + .label .ball {
+    animation: slideOn 0.3s linear forwards;
   }
 }
 
@@ -146,19 +232,19 @@
     transform: translateX(0);
   }
   50% {
-    transform: translateX(20px);
+    transform: translateX(10px);
   }
   100% {
-    transform: translateX(40px);
+    transform: translateX(18px);
   }
 }
 
 @keyframes slideOff {
   0% {
-    transform: translateX(40px);
+    transform: translateX(18px);
   }
   50% {
-    transform: translateX(20px);
+    transform: translateX(10px);
   }
   100% {
     transform: translateX(0);
