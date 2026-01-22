@@ -9,20 +9,20 @@ const plans = [
   {
     id: 1,
     name: 'arcade',
-    monthly: '9',
-    yearly: '90',
+    monthly: 9,
+    yearly: 90,
   },
   {
     id: 2,
     name: 'advanced',
-    monthly: '12',
-    yearly: '120',
+    monthly: 12,
+    yearly: 120,
   },
   {
     id: 3,
     name: 'pro',
-    monthly: '15',
-    yearly: '50',
+    monthly: 15,
+    yearly: 150,
   },
 ];
 

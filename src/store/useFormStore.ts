@@ -7,14 +7,16 @@ interface FormState {
   phone: string;
   subscriptionType: 'monthly' | 'yearly';
   planType: 'arcade' | 'advanced' | 'pro';
-  addOns: null | 'online service' | 'larger storage' | 'customizable profile';
+  addOns: null | ['online service' | 'larger storage' | 'customizable profile'];
   setName: (name: string) => void;
   setEmail: (email: string) => void;
   setPhone: (phone: string) => void;
   setSubscriptionType: (subscriptionType: 'monthly' | 'yearly') => void;
   setPlanType: (planType: 'arcade' | 'advanced' | 'pro') => void;
   setAddOns: (
-    addOns: null | 'online service' | 'larger storage' | 'customizable profile',
+    addOns:
+      | null
+      | ['online service' | 'larger storage' | 'customizable profile'],
   ) => void;
 }
 
